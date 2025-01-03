@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer sair comigo? 😏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #sim {
+            background-color: #28a745;
+            color: white;
+        }
+        #nao {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+        #mensagem {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer sair comigo? 😏</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+    <div id="mensagem">Eu meio que sabia que seria sim. A qualquer momento mando o endereço na DM, prof. Qedro! 😍</div>
+    <script>
+        const botaoNao = document.getElementById('nao');
+        const botaoSim = document.getElementById('sim');
+        const mensagem = document.getElementById('mensagem');
+
+        botaoSim.addEventListener('click', () => {
+            mensagem.style.display = 'block';
+        });
+
+        botaoNao.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - botaoNao.clientWidth);
+            const y = Math.random() * (window.innerHeight - botaoNao.clientHeight);
+            botaoNao.style.left = `${x}px`;
+            botaoNao.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
